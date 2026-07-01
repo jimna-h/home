@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>James Bruce | Resume</title>
-    <meta name="description" content="Résumé for James Bruce — education, experience, and skills." />
+    <title>James Bruce | Projects</title>
+    <meta name="description" content="Projects by James Bruce — automation, scripting, and data tools." />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -22,20 +22,20 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+    <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row px-4 px-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
-                        <h1>Resume</h1>
-                        <span class="subheading">Experience &amp; skills</span>
+                        <h1>Projects</h1>
+                        <span class="subheading">Things I've built</span>
                     </div>
                 </div>
             </div>
@@ -45,73 +45,26 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
 
-                <!-- TODO: export your résumé as a PDF, name it exactly
-                     James-Bruce-Resume.pdf, and drop it in the assets/ folder.
-                     Until you do, this button 404s. -->
-                <div class="mb-4">
-                    <a class="btn btn-primary" href="assets/James-Bruce-Resume.pdf" download>
-                        <i class="fas fa-download"></i> Download PDF
-                    </a>
-                </div>
+                <!-- Each card is a link. Replace the href="#" with the real repo
+                     or demo URL. If a project isn't public yet, you can make the
+                     card a <div> instead of an <a> and drop the links line. -->
 
-                <section>
-                    <p class="eyebrow">Education</p>
-                    <div class="resume-item">
-                        <div class="resume-head">
-                            <h3 class="h4">B.S. in Statistics: Data Science</h3>
-                            <span class="resume-date">Expected 2027</span>
-                        </div>
-                        <div class="resume-sub">Brigham Young University — Provo, UT</div>
-                        <div class="small fw-bold">Minors: Computer Science &amp; Information Systems</div>
-                    </div>
-                </section>
+                <a class="project-card" href="#" target="_blank" rel="noopener">
+                    <h3>Slide Pipeline Automation</h3>
+                    <p class="project-meta">Google Apps Script</p>
+                    <p>Scripts that read layout sheets, crop images automatically, and assemble weekly tracking slide decks — turning a manual, repetitive build into a one-click job.</p>
+                    <p class="project-links">View on GitHub <i class="fas fa-arrow-right"></i></p>
+                </a>
 
-                <hr class="my-4" />
+                <a class="project-card" href="#" target="_blank" rel="noopener">
+                    <h3>Text Parsing &amp; Regex Suite</h3>
+                    <p class="project-meta">Python</p>
+                    <p>A set of regular-expression tools for scanning unstructured text, pulling out the fields I need, and returning fast lookup sets.</p>
+                    <p class="project-links">View on GitHub <i class="fas fa-arrow-right"></i></p>
+                </a>
 
-                <section>
-                    <p class="eyebrow">Experience</p>
-
-                    <div class="resume-item">
-                        <div class="resume-head">
-                            <h3 class="h4">Information Systems Teaching Assistant</h3>
-                            <span class="resume-date">Feb 2026 – Present</span>
-                        </div>
-                        <div class="resume-sub">BYU Information Systems Department</div>
-                        <ul>
-                            <li>Coach students through relational database design, web page structure, and core scripting logic.</li>
-                            <li>Debug and grade student work across HTML/CSS, SQL, and VBA assignments.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item">
-                        <div class="resume-head">
-                            <h3 class="h4">Research Assistant</h3>
-                            <span class="resume-date">Jan 2026 – Present</span>
-                        </div>
-                        <div class="resume-sub">Augmented Reality Immersive Space Lab</div>
-                        <ul>
-                            <li>Support AR experiments by tracking device configurations and keeping experiment setups organized.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <hr class="my-4" />
-
-                <section>
-                    <p class="eyebrow">Skills</p>
-                    <!-- TODO: edit this list to match what you actually want to
-                         advertise. Add or remove tags freely. -->
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Regex</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">HTML / CSS</span>
-                        <span class="tech-tag">VBA</span>
-                        <span class="tech-tag">Google Apps Script</span>
-                        <span class="tech-tag">Git &amp; GitHub</span>
-                        <span class="tech-tag">Data analysis</span>
-                    </div>
-                </section>
+                <!-- Copy a card above to add more projects. Aim for 3–5 that
+                     each link somewhere a recruiter can actually click. -->
 
             </div>
         </div>
