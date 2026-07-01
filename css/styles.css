@@ -10947,3 +10947,40 @@ article .italic {
     font-style: italic;
     font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+
+/* ==========================================================================
+   VIEWPORT SCROLL STABILIZATION & THEME INTEGRATION
+   ========================================================================== */
+
+/* Force a vertical scroll bar context universally to prevent layout jumping */
+html {
+    overflow-y: scroll;
+}
+
+/* Highlight accent styling rules for specific interaction indicators */
+.text-custom-accent {
+    color: #0085a1 !important;
+    font-weight: 700;
+}
+.text-custom-accent:hover {
+    color: #00657b !important;
+}
+
+/* Document layout structural text adjustments */
+article ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+article ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+article .italic {
+    font-style: italic;
+    font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
