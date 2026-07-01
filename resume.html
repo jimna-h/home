@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">James Bruce</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,69 +27,62 @@
             </div>
         </div>
     </nav>
-    <!-- Explicit inline asset style override to guarantee image loading -->
     <header class="masthead" style="background-image: url('assets/img/post-bg.jpg'); background-size: cover; background-position: center;">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row px-4 px-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
                         <h1>Resume</h1>
-                        <span class="subheading">Professional Track &amp; Qualifications</span>
+                        <span class="subheading">Work Experience &amp; Skills</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <article class="mb-4">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    
-                    <div class="p-3 bg-light border rounded mb-5 text-muted small">
-                        <strong>Personal Summary:</strong> I live in Utah with my wife Megan and our daughters. Outside of technical data modeling, script optimization, and laboratory infrastructure, I spend my time executing structural health and resistance projects, strategy analysis formats, and building system automations.
-                    </div>
+    <main class="container px-4 px-lg-5 my-4 flex-grow-1">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
 
-                    <h2 class="section-heading text-uppercase text-secondary" style="font-size: 1.4rem;">Education</h2>
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between align-items-baseline">
-                            <h3 class="h4 mb-0 fw-bold">B.S. in Statistics: Data Science</h3>
-                            <span class="text-muted small">Expected Graduation: 2027</span>
-                        </div>
-                        <div class="text-muted italic">Brigham Young University — Provo, UT</div>
-                        <div class="small text-dark fw-bold mt-1">Minors: Computer Science &amp; Information Systems</div>
+                <h2 class="section-heading text-uppercase text-secondary" style="font-size: 1.4rem;">Education</h2>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h3 class="h4 mb-0 fw-bold">B.S. in Statistics: Data Science</h3>
+                        <span class="text-muted small">Expected Graduation: 2027</span>
                     </div>
+                    <div class="text-muted italic">Brigham Young University — Provo, UT</div>
+                    <div class="small text-dark fw-bold mt-1">Minors: Computer Science &amp; Information Systems</div>
+                </div>
 
-                    <hr class="my-4" />
+                <hr class="my-4" />
 
-                    <h2 class="section-heading text-uppercase text-secondary" style="font-size: 1.4rem;">Professional Experience</h2>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between align-items-baseline">
-                            <h3 class="h4 mb-0 fw-bold">Information Systems Teaching Assistant</h3>
-                            <span class="text-muted small">Feb 2026 – Present</span>
-                        </div>
-                        <div class="text-muted italic mb-2">BYU Information Systems Department</div>
-                        <ul>
-                            <li>Instruct university students on relational backend design, system workflows, and structural scripting logic.</li>
-                            <li>Provide debugging remediation across HTML/CSS documents, functional SQL schemas, and automation macros inside VBA desktop environments.</li>
-                        </ul>
+                <h2 class="section-heading text-uppercase text-secondary" style="font-size: 1.4rem;">Experience</h2>
+                
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h3 class="h4 mb-0 fw-bold">Information Systems Teaching Assistant</h3>
+                        <span class="text-muted small">Feb 2026 – Present</span>
                     </div>
+                    <div class="text-muted italic mb-2">BYU Information Systems Department</div>
+                    <ul>
+                        <li>Guide students through basic relational layout design, web structures, and core scripting logic.</li>
+                        <li>Provide debugging remediation across HTML/CSS validation layers, relational SQL assignments, and VBA script logic.</li>
+                    </ul>
+                </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between align-items-baseline">
-                            <h3 class="h4 mb-0 fw-bold">Research Assistant</h3>
-                            <span class="text-muted small">Jan 2026 – Present</span>
-                        </div>
-                        <div class="text-muted italic mb-2">Augmented Reality Immersive Space Lab</div>
-                        <ul>
-                            <li>Coordinate engineering parameters, device tracking integrations, and display layers within developmental spatial configurations.</li>
-                        </ul>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h3 class="h4 mb-0 fw-bold">Research Assistant</h3>
+                        <span class="text-muted small">Jan 2026 – Present</span>
                     </div>
+                    <div class="text-muted italic mb-2">Augmented Reality Immersive Space Lab</div>
+                    <ul>
+                        <li>Help track device configurations, engine coordinates, and interface layers inside interactive spatial configurations.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </article>
-    <footer class="border-top py-4 bg-light">
+    </main>
+    <footer class="border-top py-4 bg-light w-100">
         <div class="container px-4 px-lg-5">
             <div class="small text-center text-muted">© 2026 James Bruce. All rights reserved.</div>
         </div>
