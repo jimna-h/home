@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>James Bruce | Projects</title>
+    <meta name="description" content="Projects by James Bruce — automation, scripting, and data tools." />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -21,7 +23,7 @@
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -33,7 +35,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
                         <h1>Projects</h1>
-                        <span class="subheading">Things I've Built</span>
+                        <span class="subheading">Things I've built</span>
                     </div>
                 </div>
             </div>
@@ -42,28 +44,42 @@
     <main class="container px-4 px-lg-5 my-4 flex-grow-1">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                
-                <div class="post-preview mb-4">
-                    <h2 class="post-title" style="font-size: 1.6rem; margin-top:10px;">Slide Pipeline Automation</h2>
-                    <p class="post-meta" style="margin-bottom:8px;">Google Apps Script API Model</p>
-                    <p class="small text-muted">Constructed loops that parse background layout sheets, crop images systematically, and map data into dynamic weekly tracking decks.</p>
-                </div>
-                <hr class="my-4" />
 
-                <div class="post-preview mb-4">
-                    <h2 class="post-title" style="font-size: 1.6rem; margin-top:10px;">Advanced String Evaluation Suite</h2>
-                    <p class="post-meta" style="margin-bottom:8px;">Python / Regex Core Syntax Filters</p>
-                    <p class="small text-muted">Built custom regular expression blocks for scanning unformatted text blobs, filtering targeted parameters, and returning fast lookup sets.</p>
-                </div>
+                <!-- Each card is a link. Replace the href="#" with the real repo
+                     or demo URL. If a project isn't public yet, you can make the
+                     card a <div> instead of an <a> and drop the links line. -->
+
+                <a class="project-card" href="#" target="_blank" rel="noopener">
+                    <h3>Slide Pipeline Automation</h3>
+                    <p class="project-meta">Google Apps Script</p>
+                    <p>Scripts that read layout sheets, crop images automatically, and assemble weekly tracking slide decks — turning a manual, repetitive build into a one-click job.</p>
+                    <p class="project-links">View on GitHub <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+                <a class="project-card" href="#" target="_blank" rel="noopener">
+                    <h3>Text Parsing &amp; Regex Suite</h3>
+                    <p class="project-meta">Python</p>
+                    <p>A set of regular-expression tools for scanning unstructured text, pulling out the fields I need, and returning fast lookup sets.</p>
+                    <p class="project-links">View on GitHub <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+                <!-- Copy a card above to add more projects. Aim for 3–5 that
+                     each link somewhere a recruiter can actually click. -->
 
             </div>
         </div>
     </main>
     <footer class="border-top py-4 bg-light w-100">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">© 2026 James Bruce. All rights reserved.</div>
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="footer-links">
+                <a href="https://github.com/jimna-h" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:you@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="small text-muted">© 2026 James Bruce. All rights reserved.</div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
