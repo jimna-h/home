@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>James Bruce | Resume</title>
+    <meta name="description" content="Résumé for James Bruce — education, experience, and skills." />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -20,20 +22,20 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg'); background-size: cover; background-position: center;">
+    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row px-4 px-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
                         <h1>Resume</h1>
-                        <span class="subheading">Work Experience &amp; Skills</span>
+                        <span class="subheading">Experience &amp; skills</span>
                     </div>
                 </div>
             </div>
@@ -43,50 +45,88 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
 
-                <h2 class="section-heading text-uppercase text-secondary" style="font-size: 1.4rem;">Education</h2>
+                <!-- TODO: export your résumé as a PDF, name it exactly
+                     James-Bruce-Resume.pdf, and drop it in the assets/ folder.
+                     Until you do, this button 404s. -->
                 <div class="mb-4">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <h3 class="h4 mb-0 fw-bold">B.S. in Statistics: Data Science</h3>
-                        <span class="text-muted small">Expected Graduation: 2027</span>
-                    </div>
-                    <div class="text-muted italic">Brigham Young University — Provo, UT</div>
-                    <div class="small text-dark fw-bold mt-1">Minors: Computer Science &amp; Information Systems</div>
+                    <a class="btn btn-primary" href="assets/James-Bruce-Resume.pdf" download>
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
                 </div>
+
+                <section>
+                    <p class="eyebrow">Education</p>
+                    <div class="resume-item">
+                        <div class="resume-head">
+                            <h3 class="h4">B.S. in Statistics: Data Science</h3>
+                            <span class="resume-date">Expected 2027</span>
+                        </div>
+                        <div class="resume-sub">Brigham Young University — Provo, UT</div>
+                        <div class="small fw-bold">Minors: Computer Science &amp; Information Systems</div>
+                    </div>
+                </section>
 
                 <hr class="my-4" />
 
-                <h2 class="section-heading text-uppercase text-secondary" style="font-size: 1.4rem;">Experience</h2>
-                
-                <div class="mb-4">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <h3 class="h4 mb-0 fw-bold">Information Systems Teaching Assistant</h3>
-                        <span class="text-muted small">Feb 2026 – Present</span>
-                    </div>
-                    <div class="text-muted italic mb-2">BYU Information Systems Department</div>
-                    <ul>
-                        <li>Guide students through basic relational layout design, web structures, and core scripting logic.</li>
-                        <li>Provide debugging remediation across HTML/CSS validation layers, relational SQL assignments, and VBA script logic.</li>
-                    </ul>
-                </div>
+                <section>
+                    <p class="eyebrow">Experience</p>
 
-                <div class="mb-4">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <h3 class="h4 mb-0 fw-bold">Research Assistant</h3>
-                        <span class="text-muted small">Jan 2026 – Present</span>
+                    <div class="resume-item">
+                        <div class="resume-head">
+                            <h3 class="h4">Information Systems Teaching Assistant</h3>
+                            <span class="resume-date">Feb 2026 – Present</span>
+                        </div>
+                        <div class="resume-sub">BYU Information Systems Department</div>
+                        <ul>
+                            <li>Coach students through relational database design, web page structure, and core scripting logic.</li>
+                            <li>Debug and grade student work across HTML/CSS, SQL, and VBA assignments.</li>
+                        </ul>
                     </div>
-                    <div class="text-muted italic mb-2">Augmented Reality Immersive Space Lab</div>
-                    <ul>
-                        <li>Help track device configurations, engine coordinates, and interface layers inside interactive spatial configurations.</li>
-                    </ul>
-                </div>
+
+                    <div class="resume-item">
+                        <div class="resume-head">
+                            <h3 class="h4">Research Assistant</h3>
+                            <span class="resume-date">Jan 2026 – Present</span>
+                        </div>
+                        <div class="resume-sub">Augmented Reality Immersive Space Lab</div>
+                        <ul>
+                            <li>Support AR experiments by tracking device configurations and keeping experiment setups organized.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="my-4" />
+
+                <section>
+                    <p class="eyebrow">Skills</p>
+                    <!-- TODO: edit this list to match what you actually want to
+                         advertise. Add or remove tags freely. -->
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Regex</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">HTML / CSS</span>
+                        <span class="tech-tag">VBA</span>
+                        <span class="tech-tag">Google Apps Script</span>
+                        <span class="tech-tag">Git &amp; GitHub</span>
+                        <span class="tech-tag">Data analysis</span>
+                    </div>
+                </section>
+
             </div>
         </div>
     </main>
     <footer class="border-top py-4 bg-light w-100">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">© 2026 James Bruce. All rights reserved.</div>
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="footer-links">
+                <a href="https://github.com/jimna-h" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:you@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="small text-muted">© 2026 James Bruce. All rights reserved.</div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
