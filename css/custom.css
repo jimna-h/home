@@ -1,0 +1,105 @@
+/* ==========================================================================
+   custom.css  —  James Bruce
+   All personal styling lives here. It loads AFTER the theme's styles.css.
+
+   RULE OF THUMB: never edit styles.css again — that's the Bootstrap /
+   Clean Blog vendor file. Anything you want to change or add goes in here.
+   Every rule below is actually used by the HTML pages (no dead weight).
+   ========================================================================== */
+
+:root {
+  --accent: #0085a1;        /* one accent color, matches the theme's teal   */
+  --accent-dark: #00657b;   /* hover / active state                          */
+  --muted: #6c757d;
+  --line: #e2e8f0;          /* hairline borders                              */
+  --tag-bg: #f1f5f9;        /* skill-tag background                          */
+}
+
+/* Keep a scrollbar gutter reserved so pages don't shift sideways. */
+html { overflow-y: scroll; }
+
+/* --- Nav: highlight the page you're on ---------------------------------- */
+#mainNav .nav-link.active {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+/* --- Small uppercase label above a content block ------------------------ */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+/* --- Hero call-to-action buttons ---------------------------------------- */
+.hero-actions { margin-top: 1.75rem; }
+.hero-actions .btn { margin: 0.25rem 0.4rem 0.25rem 0; }
+
+/* --- Résumé entries ----------------------------------------------------- */
+.resume-item { margin: 0 0 2rem; }
+.resume-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.resume-head h3 { margin: 0; font-weight: 700; }
+.resume-date { color: var(--muted); font-style: italic; white-space: nowrap; }
+.resume-sub  { color: var(--muted); font-style: italic; margin: 0.15rem 0 0.5rem; }
+@media (max-width: 576px) {
+  .resume-date { white-space: normal; }
+}
+
+/* --- Skill / tech tags -------------------------------------------------- */
+.tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+.tech-tag {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  background: var(--tag-bg);
+  color: #475569;
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+/* --- Project cards ------------------------------------------------------ */
+.project-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.25rem;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+a.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent);
+  color: inherit;
+}
+.project-card h3 { font-size: 1.4rem; margin: 0 0 0.15rem; }
+.project-card .project-meta {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.project-card p { margin: 0; color: #475569; }
+.project-card .project-links { margin-top: 0.75rem; font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+/* --- Contact page ------------------------------------------------------- */
+.contact-methods { margin: 1.25rem 0 2.25rem; padding-left: 0; list-style: none; }
+.contact-methods li { margin-bottom: 0.5rem; }
+.contact-methods a { color: var(--accent); font-weight: 600; }
+.contact-methods a:hover { color: var(--accent-dark); }
+.form-note { font-size: 0.9rem; color: var(--muted); }
+
+/* --- Footer social links ------------------------------------------------ */
+.footer-links { margin-bottom: 0.35rem; }
+.footer-links a { color: var(--muted); margin: 0 0.5rem; font-size: 1.15rem; }
+.footer-links a:hover { color: var(--accent); }
