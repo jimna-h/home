@@ -10796,3 +10796,122 @@ header.masthead .post-heading .meta a {
     font-size: 2.25rem;
   }
 }
+
+/* ==========================================================================
+   EXECUTIVE RESUME HUB CUSTOM OVERRIDES (James Bruce Custom Theme Tuning)
+   ========================================================================== */
+
+:root {
+    --bs-teal: #0d9488 !important;         /* Sharp Emerald/Teal core accent */
+    --bs-teal-light: #f0fdfa !important;   /* Soft highlight fill tint */
+    --bs-teal-soft: #ccfbf1 !important;    /* Border tint accent */
+    --bs-dark-gray: #1e293b !important;    /* Professional primary headers color */
+}
+
+/* Base Typographic Tightening */
+body {
+    color: #334155;
+    background-color: #ffffff;
+}
+
+.bg-light-gray {
+    background-color: #f8fafc;
+}
+
+/* Remove default giant blog post header styles */
+.site-header-clean h1 {
+    font-size: 2.5rem;
+    color: var(--bs-dark-gray);
+    letter-spacing: -0.03em;
+}
+
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-wider { letter-spacing: 0.05em; font-size: 0.75rem; }
+.font-mono { font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.x-small { font-size: 0.7rem !important; }
+
+.section-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.07em;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.35rem;
+}
+
+/* Links & Accents Overrides */
+.text-teal { color: var(--bs-teal) !important; }
+.bg-teal-light { background-color: var(--bs-teal-light) !important; }
+.border-teal-soft { border-color: var(--bs-teal-soft) !important; }
+
+#mainNav .navbar-nav .nav-item .nav-link.active-link {
+    color: var(--bs-teal) !important;
+    font-weight: 700;
+}
+
+.header-links a:hover {
+    color: var(--bs-teal) !important;
+}
+
+/* Resume Layout Adjustments */
+.shelf-text {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+ul.custom-bullets {
+    margin-bottom: 0.5rem;
+}
+
+ul.custom-bullets li {
+    margin-bottom: 0.4rem;
+    line-height: 1.45;
+}
+
+/* Skill Blocks Styling */
+.tech-tag {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.72rem;
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    display: inline-block;
+}
+
+/* Button UI Tuning */
+.btn-teal {
+    background-color: var(--bs-teal) !important;
+    color: #ffffff !important;
+    border: none;
+}
+.btn-teal:hover {
+    background-color: #0f766e !important;
+}
+
+/* Interactive Page Layout Cards */
+.project-card {
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px solid #e2e8f0 !important;
+}
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05) !important;
+}
+.app-icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bs-teal-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Vertical grid separator rules on large screens */
+@media (min-width: 992px) {
+    .border-start-lg {
+        border-left: 1px solid #e2e8f0 !important;
+    }
+}
+.max-w-xl { max-w: 36rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
