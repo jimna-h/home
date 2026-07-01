@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>James Bruce | Contact</title>
+    <meta name="description" content="Get in touch with James Bruce — email, LinkedIn, GitHub, or the message form." />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -22,7 +24,7 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -33,7 +35,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
                         <h1>Contact</h1>
-                        <span class="subheading">Get In Touch</span>
+                        <span class="subheading">Get in touch</span>
                     </div>
                 </div>
             </div>
@@ -42,32 +44,55 @@
     <main class="container px-4 px-lg-5 my-4 flex-grow-1">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Have a question or want to collaborate on something? Drop a message below.</p>
+
+                <p>The fastest way to reach me is email or LinkedIn. You can also drop a message below.</p>
+
+                <!-- TODO: fill in your real email and LinkedIn URL below. -->
+                <ul class="contact-methods">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:you@example.com">you@example.com</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">linkedin.com/in/your-linkedin</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/jimna-h" target="_blank" rel="noopener">github.com/jimna-h</a></li>
+                </ul>
+
+                <!-- This form uses Formspree so a static GitHub Pages site can
+                     actually send email. Steps:
+                       1. Make a free account at https://formspree.io
+                       2. Create a form; it gives you an ID like abcdwxyz
+                       3. Replace YOUR_FORM_ID in the action below with it.
+                     Until then, the form won't deliver anything. -->
                 <div class="my-4">
-                    <form id="contactForm">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-floating border-bottom mb-2">
-                            <input class="form-control border-0 shadow-none px-0" id="name" type="text" placeholder="Name" required />
+                            <input class="form-control border-0 shadow-none px-0" id="name" name="name" type="text" placeholder="Name" required />
                             <label class="px-0" for="name">Name</label>
                         </div>
                         <div class="form-floating border-bottom mb-2">
-                            <input class="form-control border-0 shadow-none px-0" id="email" type="email" placeholder="Email" required />
+                            <input class="form-control border-0 shadow-none px-0" id="email" name="email" type="email" placeholder="Email" required />
                             <label class="px-0" for="email">Email address</label>
                         </div>
                         <div class="form-floating border-bottom mb-4">
-                            <textarea class="form-control border-0 shadow-none px-0" id="message" placeholder="Message" style="height: 10rem" required></textarea>
+                            <textarea class="form-control border-0 shadow-none px-0" id="message" name="message" placeholder="Message" style="height: 10rem" required></textarea>
                             <label class="px-0" for="message">Message</label>
                         </div>
-                        <button class="btn btn-primary text-uppercase" type="submit">Send Message</button>
+                        <button class="btn btn-primary text-uppercase" type="submit">Send message</button>
+                        <p class="form-note mt-2">Goes straight to my inbox — I'll reply within a day or two.</p>
                     </form>
                 </div>
+
             </div>
         </div>
     </main>
     <footer class="border-top py-4 bg-light w-100">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">© 2026 James Bruce. All rights reserved.</div>
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="footer-links">
+                <a href="https://github.com/jimna-h" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:you@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="small text-muted">© 2026 James Bruce. All rights reserved.</div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
