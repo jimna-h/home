@@ -45,15 +45,23 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-10 col-xl-9">
 
-                <!-- The PDF this points to lives at assets/James-Bruce-Resume.pdf.
-                     When you update your résumé, re-export from Google Docs
-                     (File > Download > PDF Document), keep the same filename, and
-                     replace the file in assets/. -->
-                <div class="d-flex justify-content-end mb-3">
+                <!-- Top bar: one-page / full toggle + PDF download.
+                     The PDF lives at assets/James-Bruce-Resume.pdf. When you update
+                     your résumé, re-export from Google Docs (File > Download > PDF),
+                     keep the same filename, and replace the file in assets/. -->
+                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
+                    <div class="resume-toggle" role="group" aria-label="Résumé length">
+                        <button type="button" class="resume-toggle-btn active" data-view="short" aria-pressed="true">One-page</button>
+                        <button type="button" class="resume-toggle-btn" data-view="full" aria-pressed="false">Full history</button>
+                    </div>
                     <a class="btn btn-outline-primary btn-sm" href="assets/James-Bruce-Resume.pdf" download>
                         <i class="fas fa-download"></i> Download PDF
                     </a>
                 </div>
+
+                <!-- Everything inside here responds to the toggle. Any entry with
+                     class="... full-only" shows only in Full history view. -->
+                <div id="resumeContent" data-resume-view="short">
 
                 <!-- ================= EDUCATION ================= -->
                 <section>
@@ -169,7 +177,7 @@
                         </ul>
                     </div>
 
-                    <div class="resume-item">
+                    <div class="resume-item full-only">
                         <div class="resume-head">
                             <h3 class="h4">Community Aid — Student Family Housing</h3>
                             <span class="resume-date">Aug 2025 – Present</span>
@@ -210,7 +218,7 @@
                         </ul>
                     </div>
 
-                    <div class="resume-item">
+                    <div class="resume-item full-only">
                         <div class="resume-head">
                             <h3 class="h4">Delivery Driver</h3>
                             <span class="resume-date">Sep 2022 – Jul 2024</span>
@@ -221,7 +229,7 @@
                         </ul>
                     </div>
 
-                    <div class="resume-item">
+                    <div class="resume-item full-only">
                         <div class="resume-head">
                             <h3 class="h4">Full-Time Volunteer Representative</h3>
                             <span class="resume-date">Sep 2020 – Sep 2022</span>
@@ -232,6 +240,8 @@
                         </ul>
                     </div>
                 </section>
+
+                </div><!-- /#resumeContent -->
 
             </div>
         </div>
@@ -248,5 +258,24 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        // One-page / Full history toggle. Switches which entries are visible by
+        // setting data-resume-view on the content wrapper; CSS does the hiding.
+        (function () {
+            var content = document.getElementById('resumeContent');
+            if (!content) return;
+            var buttons = document.querySelectorAll('.resume-toggle-btn');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    content.setAttribute('data-resume-view', btn.getAttribute('data-view'));
+                    buttons.forEach(function (b) {
+                        var isActive = b === btn;
+                        b.classList.toggle('active', isActive);
+                        b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
