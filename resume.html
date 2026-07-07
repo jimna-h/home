@@ -54,8 +54,11 @@
                         <button type="button" class="resume-toggle-btn active" data-view="short" aria-pressed="true">One-page</button>
                         <button type="button" class="resume-toggle-btn" data-view="full" aria-pressed="false">Full history</button>
                     </div>
-                    <a class="btn btn-outline-primary btn-sm" href="assets/James-Bruce-Resume.pdf" download>
-                        <i class="fas fa-download"></i> Download PDF
+                    <a id="resumeDownload" class="btn btn-outline-primary btn-sm"
+                       href="assets/James-Bruce-Resume.pdf"
+                       data-short="assets/James-Bruce-Resume.pdf"
+                       data-full="assets/James-Bruce-Resume-Full.pdf" download>
+                        <i class="fas fa-download"></i> <span id="resumeDownloadLabel">Download PDF</span>
                     </a>
                 </div>
 
@@ -117,9 +120,9 @@
 
                 <hr class="my-4" />
 
-                <!-- ================= NOTABLE PROJECTS ================= -->
+                <!-- ================= NOTABLE CONTRIBUTIONS ================= -->
                 <section>
-                    <p class="eyebrow">Notable Projects</p>
+                    <p class="eyebrow">Notable Contributions</p>
 
                     <div class="mb-3">
                         <h3 class="h5 mb-1">Mobile Barcode Scanning Integration</h3>
@@ -220,6 +223,17 @@
 
                     <div class="resume-item full-only">
                         <div class="resume-head">
+                            <h3 class="h4">Community Support Worker</h3>
+                            <span class="resume-date">Jun 2023 – Aug 2023</span>
+                        </div>
+                        <div class="resume-sub">Craig Spjute — Boise, ID</div>
+                        <ul>
+                            <li>Supported daily living, social growth, and life-skills training for a client with special needs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item full-only">
+                        <div class="resume-head">
                             <h3 class="h4">Delivery Driver</h3>
                             <span class="resume-date">Sep 2022 – Jul 2024</span>
                         </div>
@@ -237,6 +251,28 @@
                         <div class="resume-sub">The Church of Jesus Christ of Latter-day Saints — Mesa, AZ &amp; Scotland / Ireland</div>
                         <ul>
                             <li>Coordinated and led instruction sessions and prepared weekly progress reports.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item full-only">
+                        <div class="resume-head">
+                            <h3 class="h4">Host &amp; Busser</h3>
+                            <span class="resume-date">Dec 2018 – Jun 2020</span>
+                        </div>
+                        <div class="resume-sub">Olive Garden Italian Kitchen — Boise, ID</div>
+                        <ul>
+                            <li>Balanced multiple responsibilities efficiently in a fast-paced restaurant environment.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item full-only">
+                        <div class="resume-head">
+                            <h3 class="h4">Carhop &amp; Drive-thru Operator</h3>
+                            <span class="resume-date">May 2018 – Aug 2018</span>
+                        </div>
+                        <div class="resume-sub">Sonic Drive-In — Boise, ID</div>
+                        <ul>
+                            <li>Balanced multiple responsibilities efficiently in a fast-paced restaurant environment.</li>
                         </ul>
                     </div>
                 </section>
@@ -260,19 +296,29 @@
     <script src="js/scripts.js"></script>
     <script>
         // One-page / Full history toggle. Switches which entries are visible by
-        // setting data-resume-view on the content wrapper; CSS does the hiding.
+        // setting data-resume-view on the content wrapper (CSS does the hiding),
+        // and swaps the download button between the short and full PDFs.
         (function () {
             var content = document.getElementById('resumeContent');
             if (!content) return;
             var buttons = document.querySelectorAll('.resume-toggle-btn');
+            var download = document.getElementById('resumeDownload');
+            var downloadLabel = document.getElementById('resumeDownloadLabel');
+
             buttons.forEach(function (btn) {
                 btn.addEventListener('click', function () {
-                    content.setAttribute('data-resume-view', btn.getAttribute('data-view'));
+                    var view = btn.getAttribute('data-view');
+                    content.setAttribute('data-resume-view', view);
                     buttons.forEach(function (b) {
                         var isActive = b === btn;
                         b.classList.toggle('active', isActive);
                         b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
                     });
+                    if (download) {
+                        var full = view === 'full';
+                        download.setAttribute('href', download.getAttribute(full ? 'data-full' : 'data-short'));
+                        if (downloadLabel) downloadLabel.textContent = full ? 'Download full PDF' : 'Download PDF';
+                    }
                 });
             });
         })();
