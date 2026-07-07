@@ -100,11 +100,10 @@ html { overflow-y: scroll; }
   color: inherit;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
-a.project-card:hover {
+.project-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.12);
   border-color: var(--accent);
-  color: inherit;
 }
 .project-card h3 { font-size: 1.4rem; margin: 0 0 0.15rem; }
 .project-card .project-meta {
@@ -114,7 +113,9 @@ a.project-card:hover {
   margin-bottom: 0.5rem;
 }
 .project-card p { margin: 0; color: #475569; }
-.project-card .project-links { margin-top: 0.75rem; font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+.project-card .project-links { margin-top: 0.85rem; font-size: 0.9rem; font-weight: 600; }
+.project-card .project-links a { color: var(--accent); margin-right: 1.1rem; text-decoration: none; }
+.project-card .project-links a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* --- Contact page ------------------------------------------------------- */
 .form-note { font-size: 0.9rem; color: var(--muted); }
