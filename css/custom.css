@@ -54,6 +54,29 @@ html { overflow-y: scroll; }
   .resume-date { white-space: normal; }
 }
 
+/* --- Résumé length toggle ---------------------------------------------- */
+.resume-toggle {
+  display: inline-flex;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.resume-toggle-btn {
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.95rem;
+  cursor: pointer;
+}
+.resume-toggle-btn.active { background: var(--accent); color: #fff; }
+
+/* Entries tagged full-only are hidden in the default one-page view and
+   revealed when the wrapper switches to the full view. */
+.full-only { display: none; }
+[data-resume-view="full"] .full-only { display: revert; }
+
 /* --- Skill / tech tags -------------------------------------------------- */
 .tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
 .tech-tag {
