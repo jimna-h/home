@@ -94,10 +94,6 @@ a.project-card:hover {
 .project-card .project-links { margin-top: 0.75rem; font-size: 0.9rem; font-weight: 600; color: var(--accent); }
 
 /* --- Contact page ------------------------------------------------------- */
-.contact-methods { margin: 1.25rem 0 2.25rem; padding-left: 0; list-style: none; }
-.contact-methods li { margin-bottom: 0.5rem; }
-.contact-methods a { color: var(--accent); font-weight: 600; }
-.contact-methods a:hover { color: var(--accent-dark); }
 .form-note { font-size: 0.9rem; color: var(--muted); }
 
 /* --- Footer social links ------------------------------------------------ */
