@@ -1,0 +1,124 @@
+# Your résumé content. Edit here to update the Resume page.
+# For experience entries, set  full_only: true  to hide a role in the
+# default one-page view (it only shows under "Full history").
+
+education:
+  - degree: "B.S. in Statistics: Data Science"
+    date: "Anticipated April 2027"
+    org: "Brigham Young University — Provo, UT"
+    bullets:
+      - "Minors in Information Systems & Computer Science"
+      - "Winner, BYU Statistics Underclassmen Team Case Study Competition (2024)"
+      - "Member: Statistics Club Association, Data Science Association, AI in Business Society"
+
+skills:
+  - group: Programming
+    items: [Python, SQL, R, VBA, HTML, CSS, JavaScript]
+  - group: Tools & Platforms
+    items: [Excel, Tableau, n8n, GitHub, Unity, Typst]
+  - group: Professional
+    items: [Workflow Automation, Data Modeling, AI Prompt Engineering]
+
+contributions:
+  - title: "Mobile Barcode Scanning Integration"
+    description: >-
+      Engineered a mobile barcode scanning solution to replace error-prone
+      manual record tracking, reducing human error and speeding up daily
+      processing.
+  - title: "Automated Liaison Audit Tool"
+    description: >-
+      Programmed a data-matching script to cross-reference monthly HR
+      job-change reports against active records liaisons, automating system
+      update flags.
+  - title: "Quarterly Reporting Automation"
+    description: >-
+      Developed an Excel VBA macro that cut a quarterly, week-long
+      data-gathering and formatting process down to about 20 minutes.
+  - title: "Critical Workflow Re-Engineering"
+    description: >-
+      Used n8n to diagnose, debug, and rebuild a failing, business-critical
+      automated workflow that had stalled under legacy development.
+
+experience:
+  - title: "Research Assistant — James Gaskin, PhD"
+    date: "Jan 2026 – Present"
+    org: "Information Systems, Brigham Young University — Provo, UT"
+    full_only: false
+    bullets:
+      - "Evaluated and benchmarked alternative AR tools to standardize the development pipeline on Unity."
+      - "Led the end-to-end development of an augmented reality space application built in Unity."
+      - "Collaborated on cross-project reviews to optimize a faculty-developed statistical platform."
+
+  - title: "Teaching Assistant — Introduction to Information Systems"
+    date: "Jan 2026 – Present"
+    org: "Information Systems, Brigham Young University — Provo, UT"
+    full_only: false
+    bullets:
+      - "Provide technical mentorship and debugging support in SQL, VBA, HTML/CSS, and statistics."
+      - "Facilitate hands-on labs covering ERDs, flow charts, Tableau, and Excel Solver."
+      - "Collaborate with faculty to audit, review, and refine course curriculum and materials."
+      - "Design and deliver exam-review presentations that break down complex topics."
+
+  - title: "Community Aid — Student Family Housing"
+    date: "Aug 2025 – Present"
+    org: "Brigham Young University — Provo, UT"
+    full_only: true
+    bullets:
+      - "Provide operational support and policy compliance for two multi-family housing complexes."
+      - "Act as an on-call responder for resident needs, maintenance, and emergencies."
+      - "Coordinate resource distribution and logistics for neighborhood events and initiatives."
+
+  - title: "Data Migration & Automation Specialist"
+    date: "Nov 2025 – Feb 2026"
+    org: "Empowered Cooks — Remote"
+    full_only: false
+    bullets:
+      - "Built automated n8n workflows to integrate Shopify, Customer.io, and Membership.io."
+      - "Audited and optimized legacy Zapier automations to resolve bugs and keep the data pipeline up."
+
+  - title: "Records & Information Management Assistant"
+    date: "Jul 2024 – Jan 2026"
+    org: "BYU Office of Information Technology — Provo, UT"
+    full_only: false
+    bullets:
+      - "Managed lifecycle administration for campus records to ensure regulatory retention compliance."
+      - "Provided technical and operational support to a network of 300+ record liaisons."
+      - "Authored SOPs and internal knowledge-base files to standardize record-handling processes."
+      - "Ran regular statistical analyses on records activity to forecast infrastructure needs."
+      - "Designed and delivered training materials for full-time inter-departmental staff."
+      - "Maintained data-security integrity by managing confidential materials in access-controlled areas."
+
+  - title: "Community Support Worker"
+    date: "Jun 2023 – Aug 2023"
+    org: "Craig Spjute — Boise, ID"
+    full_only: true
+    bullets:
+      - "Supported daily living, social growth, and life-skills training for a client with special needs."
+
+  - title: "Delivery Driver"
+    date: "Sep 2022 – Jul 2024"
+    org: "UberEATS & DoorDash — Boise, ID & Provo, UT"
+    full_only: true
+    bullets:
+      - "Sustained a 100% customer satisfaction rating through proactive communication."
+
+  - title: "Full-Time Volunteer Representative"
+    date: "Sep 2020 – Sep 2022"
+    org: "The Church of Jesus Christ of Latter-day Saints — Mesa, AZ & Scotland / Ireland"
+    full_only: true
+    bullets:
+      - "Coordinated and led instruction sessions and prepared weekly progress reports."
+
+  - title: "Host & Busser"
+    date: "Dec 2018 – Jun 2020"
+    org: "Olive Garden Italian Kitchen — Boise, ID"
+    full_only: true
+    bullets:
+      - "Balanced multiple responsibilities efficiently in a fast-paced restaurant environment."
+
+  - title: "Carhop & Drive-thru Operator"
+    date: "May 2018 – Aug 2018"
+    org: "Sonic Drive-In — Boise, ID"
+    full_only: true
+    bullets:
+      - "Balanced multiple responsibilities efficiently in a fast-paced restaurant environment."

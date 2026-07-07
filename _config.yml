@@ -1,0 +1,25 @@
+# ---------------------------------------------------------------------------
+# Site-wide settings. Values here are available in any page as {{ site.<name> }}.
+# After editing this file you have to wait for GitHub to rebuild (~1 min).
+# ---------------------------------------------------------------------------
+
+title: James Bruce
+description: >-
+  James Bruce — Statistics and Data Science student at BYU with minors in
+  Computer Science and Information Systems. Résumé, projects, and contact.
+
+# This site lives at https://jimna-h.github.io/home, so the base path is /home.
+url: "https://jimna-h.github.io"
+baseurl: "/home"
+
+# Edit these in one place; the footer on every page reads from here.
+social:
+  github: https://github.com/jimna-h
+  linkedin: https://www.linkedin.com/in/james-w-bruce
+  email: jbruce0226@gmail.com
+
+# Your Formspree form id (the part after /f/ in the endpoint).
+formspree_id: xkowwpzj
+
+# Keep page filenames as-is (resume.html, not /resume/) so relative links work.
+permalink: none

@@ -1,0 +1,43 @@
+# To add a project: copy one block below and edit the fields.
+#   name        Title shown on the card
+#   meta        Small line under the title (type / tech / category)
+#   description 1-2 sentences on what it does
+#   url         Where the whole card links (live app, or repo if there's no app)
+#   source      GitHub repo for the "Source" button (can match url)
+# Order here = order on the page.
+
+- name: Manufactor
+  meta: "Magic: The Gathering · web app"
+  description: >-
+    A phone-friendly token counter for artifact-heavy decks. Create deck
+    profiles that remember your four token types and their modifiers, then
+    add, subtract, and reset counts on a tap mid-game.
+  url: https://jimna-h.github.io/manufactor/
+  source: https://github.com/jimna-h/manufactor
+
+- name: Prowess
+  meta: "Magic: The Gathering · web app"
+  description: >-
+    A per-turn tracker for prowess and storm decks. Log each spell as you cast
+    it and the app keeps a running storm count and the buff math across your
+    creatures, so you don't have to.
+  url: https://jimna-h.github.io/prowess/
+  source: https://github.com/jimna-h/prowess
+
+- name: EDHREC Hipster Quotient
+  meta: "Magic: The Gathering · live data lookup"
+  description: >-
+    Type in your Commander deck's leaders and it pulls their all-time
+    popularity rank live from EDHREC, then tells you whether you're a
+    trailblazer or riding the format's most-played picks.
+  url: https://jimna-h.github.io/edhrec-hipster-quotient/
+  source: https://github.com/jimna-h/edhrec-hipster-quotient
+
+- name: QMD Template
+  meta: "Typst package · R"
+  description: >-
+    A Typst package that runs R code inside Typst documents and renders it to
+    PDF — a lightweight alternative to Quarto for statistics coursework. Built
+    in R and Typst.
+  url: https://github.com/jimna-h/QMDTemplate
+  source: https://github.com/jimna-h/QMDTemplate

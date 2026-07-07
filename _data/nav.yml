@@ -1,0 +1,14 @@
+# The top navigation. To add/rename/reorder a link, edit this list.
+# 'id' is used to highlight the current page (matches each page's nav_active).
+- title: Home
+  url: index.html
+  id: home
+- title: Resume
+  url: resume.html
+  id: resume
+- title: Projects
+  url: projects.html
+  id: projects
+- title: Contact
+  url: contact.html
+  id: contact

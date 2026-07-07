@@ -1,325 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>James Bruce | Resume</title>
-    <meta name="description" content="Résumé for James Bruce — Statistics and Data Science student at BYU. Education, skills, projects, and experience." />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
-</head>
-<body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">James Bruce</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
-        <div class="container position-relative px-4 px-lg-5">
-            <div class="row px-4 px-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-10 col-xl-9">
-                    <div class="page-heading">
-                        <h1>Resume</h1>
-                        <span class="subheading">Education, skills &amp; experience</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="container px-4 px-lg-5 my-4 flex-grow-1">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
+---
+layout: default
+title: Resume
+nav_active: resume
+description: "Résumé for James Bruce — education, skills, projects, and experience."
+---
+
+<header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row px-4 px-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-10 col-xl-9">
-
-                <!-- Top bar: one-page / full toggle + PDF download.
-                     The PDF lives at assets/James-Bruce-Resume.pdf. When you update
-                     your résumé, re-export from Google Docs (File > Download > PDF),
-                     keep the same filename, and replace the file in assets/. -->
-                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
-                    <div class="resume-toggle" role="group" aria-label="Résumé length">
-                        <button type="button" class="resume-toggle-btn active" data-view="short" aria-pressed="true">One-page</button>
-                        <button type="button" class="resume-toggle-btn" data-view="full" aria-pressed="false">Full history</button>
-                    </div>
-                    <a id="resumeDownload" class="btn btn-outline-primary btn-sm"
-                       href="assets/James-Bruce-Resume.pdf"
-                       data-short="assets/James-Bruce-Resume.pdf"
-                       data-full="assets/James-Bruce-Resume-Full.pdf" download>
-                        <i class="fas fa-download"></i> <span id="resumeDownloadLabel">Download PDF</span>
-                    </a>
+                <div class="page-heading">
+                    <h1>Resume</h1>
+                    <span class="subheading">Education, skills &amp; experience</span>
                 </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-                <!-- Everything inside here responds to the toggle. Any entry with
-                     class="... full-only" shows only in Full history view. -->
-                <div id="resumeContent" data-resume-view="short">
+<main class="container px-4 px-lg-5 my-4 flex-grow-1">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-10 col-xl-9">
 
-                <!-- ================= EDUCATION ================= -->
+            <!-- Top bar: one-page / full toggle + PDF download.
+                 The PDFs live in assets/. When you update your résumé, re-export
+                 from Google Docs and replace the files there (same names). -->
+            <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
+                <div class="resume-toggle" role="group" aria-label="Résumé length">
+                    <button type="button" class="resume-toggle-btn active" data-view="short" aria-pressed="true">One-page</button>
+                    <button type="button" class="resume-toggle-btn" data-view="full" aria-pressed="false">Full history</button>
+                </div>
+                <a id="resumeDownload" class="btn btn-outline-primary btn-sm"
+                   href="assets/James-Bruce-Resume.pdf"
+                   data-short="assets/James-Bruce-Resume.pdf"
+                   data-full="assets/James-Bruce-Resume-Full.pdf" download>
+                    <i class="fas fa-download"></i> <span id="resumeDownloadLabel">Download PDF</span>
+                </a>
+            </div>
+
+            <div id="resumeContent" data-resume-view="short">
+
                 <section>
                     <p class="eyebrow">Education</p>
+                    {% for edu in site.data.resume.education %}
                     <div class="resume-item">
                         <div class="resume-head">
-                            <h3 class="h4">B.S. in Statistics: Data Science</h3>
-                            <span class="resume-date">Anticipated April 2027</span>
+                            <h3 class="h4">{{ edu.degree | escape }}</h3>
+                            <span class="resume-date">{{ edu.date | escape }}</span>
                         </div>
-                        <div class="resume-sub">Brigham Young University — Provo, UT</div>
+                        <div class="resume-sub">{{ edu.org | escape }}</div>
                         <ul>
-                            <li>Minors in Information Systems &amp; Computer Science</li>
-                            <li>Winner, BYU Statistics Underclassmen Team Case Study Competition (2024)</li>
-                            <li>Member: Statistics Club Association, Data Science Association, AI in Business Society</li>
+                            {% for bullet in edu.bullets %}<li>{{ bullet | escape }}</li>{% endfor %}
                         </ul>
                     </div>
+                    {% endfor %}
                 </section>
 
                 <hr class="my-4" />
 
-                <!-- ================= SKILLS ================= -->
                 <section>
                     <p class="eyebrow">Skills</p>
-
-                    <p class="fw-bold mb-1">Programming</p>
+                    {% for group in site.data.resume.skills %}
+                    <p class="fw-bold mb-1">{{ group.group | escape }}</p>
                     <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">R</span>
-                        <span class="tech-tag">VBA</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                        {% for item in group.items %}<span class="tech-tag">{{ item | escape }}</span>{% endfor %}
                     </div>
-
-                    <p class="fw-bold mb-1">Tools &amp; Platforms</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">n8n</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">Typst</span>
-                    </div>
-
-                    <p class="fw-bold mb-1">Professional</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Workflow Automation</span>
-                        <span class="tech-tag">Data Modeling</span>
-                        <span class="tech-tag">AI Prompt Engineering</span>
-                    </div>
+                    {% endfor %}
                 </section>
 
                 <hr class="my-4" />
 
-                <!-- ================= NOTABLE CONTRIBUTIONS ================= -->
                 <section>
                     <p class="eyebrow">Notable Contributions</p>
-
+                    {% for item in site.data.resume.contributions %}
                     <div class="mb-3">
-                        <h3 class="h5 mb-1">Mobile Barcode Scanning Integration</h3>
-                        <p>Engineered a mobile barcode scanning solution to replace error-prone manual record tracking, reducing human error and speeding up daily processing.</p>
+                        <h3 class="h5 mb-1">{{ item.title | escape }}</h3>
+                        <p>{{ item.description | escape }}</p>
                     </div>
-
-                    <div class="mb-3">
-                        <h3 class="h5 mb-1">Automated Liaison Audit Tool</h3>
-                        <p>Programmed a data-matching script to cross-reference monthly HR job-change reports against active records liaisons, automating system update flags.</p>
-                    </div>
-
-                    <div class="mb-3">
-                        <h3 class="h5 mb-1">Quarterly Reporting Automation</h3>
-                        <p>Developed an Excel VBA macro that cut a quarterly, week-long data-gathering and formatting process down to about 20 minutes.</p>
-                    </div>
-
-                    <div class="mb-3">
-                        <h3 class="h5 mb-1">Critical Workflow Re-Engineering</h3>
-                        <p>Used n8n to diagnose, debug, and rebuild a failing, business-critical automated workflow that had stalled under legacy development.</p>
-                    </div>
+                    {% endfor %}
                 </section>
 
                 <hr class="my-4" />
 
-                <!-- ================= EXPERIENCE ================= -->
                 <section>
                     <p class="eyebrow">Work &amp; Volunteer Experience</p>
-
-                    <div class="resume-item">
+                    {% for job in site.data.resume.experience %}
+                    <div class="resume-item{% if job.full_only %} full-only{% endif %}">
                         <div class="resume-head">
-                            <h3 class="h4">Research Assistant — James Gaskin, PhD</h3>
-                            <span class="resume-date">Jan 2026 – Present</span>
+                            <h3 class="h4">{{ job.title | escape }}</h3>
+                            <span class="resume-date">{{ job.date | escape }}</span>
                         </div>
-                        <div class="resume-sub">Information Systems, Brigham Young University — Provo, UT</div>
+                        <div class="resume-sub">{{ job.org | escape }}</div>
                         <ul>
-                            <li>Evaluated and benchmarked alternative AR tools to standardize the development pipeline on Unity.</li>
-                            <li>Led the end-to-end development of an augmented reality space application built in Unity.</li>
-                            <li>Collaborated on cross-project reviews to optimize a faculty-developed statistical platform.</li>
+                            {% for bullet in job.bullets %}<li>{{ bullet | escape }}</li>{% endfor %}
                         </ul>
                     </div>
-
-                    <div class="resume-item">
-                        <div class="resume-head">
-                            <h3 class="h4">Teaching Assistant — Introduction to Information Systems</h3>
-                            <span class="resume-date">Jan 2026 – Present</span>
-                        </div>
-                        <div class="resume-sub">Information Systems, Brigham Young University — Provo, UT</div>
-                        <ul>
-                            <li>Provide technical mentorship and debugging support in SQL, VBA, HTML/CSS, and statistics.</li>
-                            <li>Facilitate hands-on labs covering ERDs, flow charts, Tableau, and Excel Solver.</li>
-                            <li>Collaborate with faculty to audit, review, and refine course curriculum and materials.</li>
-                            <li>Design and deliver exam-review presentations that break down complex topics.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item full-only">
-                        <div class="resume-head">
-                            <h3 class="h4">Community Aid — Student Family Housing</h3>
-                            <span class="resume-date">Aug 2025 – Present</span>
-                        </div>
-                        <div class="resume-sub">Brigham Young University — Provo, UT</div>
-                        <ul>
-                            <li>Provide operational support and policy compliance for two multi-family housing complexes.</li>
-                            <li>Act as an on-call responder for resident needs, maintenance, and emergencies.</li>
-                            <li>Coordinate resource distribution and logistics for neighborhood events and initiatives.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item">
-                        <div class="resume-head">
-                            <h3 class="h4">Data Migration &amp; Automation Specialist</h3>
-                            <span class="resume-date">Nov 2025 – Feb 2026</span>
-                        </div>
-                        <div class="resume-sub">Empowered Cooks — Remote</div>
-                        <ul>
-                            <li>Built automated n8n workflows to integrate Shopify, Customer.io, and Membership.io.</li>
-                            <li>Audited and optimized legacy Zapier automations to resolve bugs and keep the data pipeline up.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item">
-                        <div class="resume-head">
-                            <h3 class="h4">Records &amp; Information Management Assistant</h3>
-                            <span class="resume-date">Jul 2024 – Jan 2026</span>
-                        </div>
-                        <div class="resume-sub">BYU Office of Information Technology — Provo, UT</div>
-                        <ul>
-                            <li>Managed lifecycle administration for campus records to ensure regulatory retention compliance.</li>
-                            <li>Provided technical and operational support to a network of 300+ record liaisons.</li>
-                            <li>Authored SOPs and internal knowledge-base files to standardize record-handling processes.</li>
-                            <li>Ran regular statistical analyses on records activity to forecast infrastructure needs.</li>
-                            <li>Designed and delivered training materials for full-time inter-departmental staff.</li>
-                            <li>Maintained data-security integrity by managing confidential materials in access-controlled areas.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item full-only">
-                        <div class="resume-head">
-                            <h3 class="h4">Community Support Worker</h3>
-                            <span class="resume-date">Jun 2023 – Aug 2023</span>
-                        </div>
-                        <div class="resume-sub">Craig Spjute — Boise, ID</div>
-                        <ul>
-                            <li>Supported daily living, social growth, and life-skills training for a client with special needs.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item full-only">
-                        <div class="resume-head">
-                            <h3 class="h4">Delivery Driver</h3>
-                            <span class="resume-date">Sep 2022 – Jul 2024</span>
-                        </div>
-                        <div class="resume-sub">UberEATS &amp; DoorDash — Boise, ID &amp; Provo, UT</div>
-                        <ul>
-                            <li>Sustained a 100% customer satisfaction rating through proactive communication.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item full-only">
-                        <div class="resume-head">
-                            <h3 class="h4">Full-Time Volunteer Representative</h3>
-                            <span class="resume-date">Sep 2020 – Sep 2022</span>
-                        </div>
-                        <div class="resume-sub">The Church of Jesus Christ of Latter-day Saints — Mesa, AZ &amp; Scotland / Ireland</div>
-                        <ul>
-                            <li>Coordinated and led instruction sessions and prepared weekly progress reports.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item full-only">
-                        <div class="resume-head">
-                            <h3 class="h4">Host &amp; Busser</h3>
-                            <span class="resume-date">Dec 2018 – Jun 2020</span>
-                        </div>
-                        <div class="resume-sub">Olive Garden Italian Kitchen — Boise, ID</div>
-                        <ul>
-                            <li>Balanced multiple responsibilities efficiently in a fast-paced restaurant environment.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item full-only">
-                        <div class="resume-head">
-                            <h3 class="h4">Carhop &amp; Drive-thru Operator</h3>
-                            <span class="resume-date">May 2018 – Aug 2018</span>
-                        </div>
-                        <div class="resume-sub">Sonic Drive-In — Boise, ID</div>
-                        <ul>
-                            <li>Balanced multiple responsibilities efficiently in a fast-paced restaurant environment.</li>
-                        </ul>
-                    </div>
+                    {% endfor %}
                 </section>
 
-                </div><!-- /#resumeContent -->
+            </div><!-- /#resumeContent -->
 
-            </div>
         </div>
-    </main>
-    <footer class="border-top py-4 bg-light w-100">
-        <div class="container px-4 px-lg-5 text-center">
-            <div class="footer-links">
-                <a href="https://github.com/jimna-h" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/james-w-bruce" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:jbruce0226@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="small text-muted">© 2026 James Bruce</div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
-        // One-page / Full history toggle. Switches which entries are visible by
-        // setting data-resume-view on the content wrapper (CSS does the hiding),
-        // and swaps the download button between the short and full PDFs.
-        (function () {
-            var content = document.getElementById('resumeContent');
-            if (!content) return;
-            var buttons = document.querySelectorAll('.resume-toggle-btn');
-            var download = document.getElementById('resumeDownload');
-            var downloadLabel = document.getElementById('resumeDownloadLabel');
-
-            buttons.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    var view = btn.getAttribute('data-view');
-                    content.setAttribute('data-resume-view', view);
-                    buttons.forEach(function (b) {
-                        var isActive = b === btn;
-                        b.classList.toggle('active', isActive);
-                        b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-                    });
-                    if (download) {
-                        var full = view === 'full';
-                        download.setAttribute('href', download.getAttribute(full ? 'data-full' : 'data-short'));
-                        if (downloadLabel) downloadLabel.textContent = full ? 'Download full PDF' : 'Download PDF';
-                    }
-                });
-            });
-        })();
-    </script>
-</body>
-</html>
+    </div>
+</main>
