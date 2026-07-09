@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 450">
+  <rect width="360" height="450" fill="#edf3f0"/>
+  <g stroke="#16262c" stroke-opacity="0.06" stroke-width="1">
+    <path d="M44 0V450 M88 0V450 M132 0V450 M176 0V450 M220 0V450 M264 0V450 M308 0V450"/>
+    <path d="M0 44H360 M0 88H360 M0 132H360 M0 176H360 M0 220H360 M0 264H360 M0 308H360 M0 352H360 M0 396H360"/>
+  </g>
+  <circle cx="180" cy="180" r="52" fill="none" stroke="#5b6b6a" stroke-width="2"/>
+  <path d="M96 330 C 120 268, 240 268, 264 330" fill="none" stroke="#5b6b6a" stroke-width="2"/>
+  <text x="180" y="386" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#5b6b6a">photo slot</text>
+  <text x="180" y="408" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8aa09a">replace assets/img/portrait.svg</text>
+</svg>

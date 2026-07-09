@@ -4,39 +4,82 @@ title: Home
 nav_active: home
 ---
 
-<header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
-    <div class="container position-relative px-4 px-lg-5">
-        <div class="row px-4 px-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>{{ site.title }}</h1>
-                    <span class="subheading">Statistics &amp; Data Science at BYU</span>
+<header class="hero">
+    <div class="container px-4 px-lg-5">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Statistics &amp; Data Science · BYU</p>
+                <h1 class="hero-name">James Bruce</h1>
+                <p class="hero-lede">I turn repetitive work into scripts, fragile systems into sturdy ones, and gut&nbsp;calls into decisions backed by data.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="resume.html">View résumé</a>
+                    <a class="btn btn-outline-primary" href="projects.html">See projects</a>
+                    <a class="btn btn-ghost" href="{{ site.social.github }}" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>&nbsp;GitHub
+                    </a>
                 </div>
             </div>
+            <!-- PHOTO SLOT: replace assets/img/portrait.svg with a real photo
+                 (e.g. assets/img/portrait.jpg — a 4:5-ish crop works best),
+                 update the src below, and edit the caption to taste. -->
+            <figure class="figure-frame hero-portrait">
+                <img src="assets/img/portrait.svg" alt="Portrait of James Bruce" width="360" height="450" />
+                <figcaption class="fig-caption">fig. 1 · the analyst in the wild</figcaption>
+            </figure>
         </div>
     </div>
 </header>
 
-<main class="container px-4 px-lg-5 my-4 flex-grow-1">
+<main class="container px-4 px-lg-5 flex-grow-1">
     <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="col-md-10 col-lg-9 col-xl-8 section-block">
 
+            <p class="eyebrow">About</p>
             <h2 class="section-heading mt-0">Hey, I'm James.</h2>
+
+            <!-- PHOTO SLOT: floats beside the text on desktop. Swap
+                 assets/img/about-photo.svg for a real photo (family, a game
+                 night, your desk…) and edit the caption. Delete this <figure>
+                 if you'd rather have text only. -->
+            <figure class="figure-frame about-figure">
+                <img src="assets/img/about-photo.svg" alt="" width="480" height="300" />
+                <figcaption class="fig-caption">fig. 2 · life outside the IDE</figcaption>
+            </figure>
+
             <p>I'm a Statistics student at BYU with a Data Science emphasis and minors in CS and Information Systems. For me, data isn’t just an academic exercise—it’s a practical lever for solving real-world problems. If a task is repetitive, I’ll automate it; if a system is fragile, I want to build a version that holds up; if a decision needs to be made, I want to look at the numbers.</p>
 
             <p>Right now, I split my time between working as a research assistant, TA-ing for an introductory Information Systems course, and writing custom automation scripts and little web apps to make life a bit easier.</p>
 
             <p>When I'm not in an IDE or a spreadsheet, I’m usually hanging out with my wife, Megan, and our two young daughters here in Utah. Otherwise, you can find me playing <em>Magic: The Gathering</em> or <em>Minecraft</em>, or trying to memorize the script to <em>Monty Python and the Holy Grail</em>.</p>
 
-            <p>This site is a home for my résumé, some of my favorite projects, and the best ways to get in touch.</p>
+        </div>
+    </div>
 
-            <div class="hero-actions">
-                <a class="btn btn-primary" href="resume.html">View résumé</a>
-                <a class="btn btn-outline-primary" href="projects.html">See projects</a>
-                <a class="btn btn-outline-dark" href="{{ site.social.github }}" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-9 col-xl-8 section-block featured-block">
+
+            <p class="eyebrow">Featured work</p>
+            <h2 class="section-heading mt-0">A few things I've built</h2>
+
+            {% for project in site.data.projects limit:3 %}
+            <div class="project-card">
+                {% if project.image %}
+                <div class="project-thumb">
+                    <img src="{{ project.image }}" alt="" loading="lazy" />
+                </div>
+                {% endif %}
+                <div class="project-body">
+                    <h3><a class="stretched-link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a></h3>
+                    <p class="project-meta">{{ project.meta }}</p>
+                    <p>{{ project.description }}</p>
+                    <p class="project-links">
+                        <a href="{{ project.source }}" target="_blank" rel="noopener">Source <i class="fab fa-github"></i></a>
+                    </p>
+                </div>
             </div>
+            {% endfor %}
+
+            <p class="mt-4"><a class="btn btn-outline-primary" href="projects.html">All projects →</a></p>
 
         </div>
     </div>

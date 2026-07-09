@@ -5,22 +5,21 @@ nav_active: resume
 description: "Résumé for James Bruce — education, skills, projects, and experience."
 ---
 
-<header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
-    <div class="container position-relative px-4 px-lg-5">
-        <div class="row px-4 px-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-10 col-xl-9">
-                <div class="page-heading">
-                    <h1>Resume</h1>
-                    <span class="subheading">Education, skills &amp; experience</span>
-                </div>
+<header class="page-hero">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-9 col-xl-8">
+                <p class="eyebrow">The data on me</p>
+                <h1 class="page-title">Résumé</h1>
+                <p class="page-sub">Education, skills &amp; experience — as a page or a PDF.</p>
             </div>
         </div>
     </div>
 </header>
 
-<main class="container px-4 px-lg-5 my-4 flex-grow-1">
+<main class="container px-4 px-lg-5 flex-grow-1">
     <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-10 col-xl-9">
+        <div class="col-md-10 col-lg-9 col-xl-8">
 
             <!-- Top bar: one-page / full toggle + PDF download.
                  The PDFs live in assets/. When you update your résumé, re-export
@@ -40,7 +39,7 @@ description: "Résumé for James Bruce — education, skills, projects, and expe
 
             <div id="resumeContent" data-resume-view="short">
 
-                <section>
+                <section class="resume-section">
                     <p class="eyebrow">Education</p>
                     {% for edu in site.data.resume.education %}
                     <div class="resume-item">
@@ -56,21 +55,18 @@ description: "Résumé for James Bruce — education, skills, projects, and expe
                     {% endfor %}
                 </section>
 
-                <hr class="my-4" />
-
-                <section>
+                <section class="resume-section">
                     <p class="eyebrow">Skills</p>
                     {% for group in site.data.resume.skills %}
-                    <p class="fw-bold mb-1">{{ group.group | escape }}</p>
+                    <p class="skill-group">{{ group.group | escape }}</p>
                     <div class="tech-tags">
                         {% for item in group.items %}<span class="tech-tag">{{ item | escape }}</span>{% endfor %}
                     </div>
                     {% endfor %}
                 </section>
 
-                <hr class="my-4" />
-
-                <section>
+                <!-- Only shown in the "Full history" view. -->
+                <section class="resume-section full-only">
                     <p class="eyebrow">Notable Contributions</p>
                     {% for item in site.data.resume.contributions %}
                     <div class="mb-3">
@@ -80,9 +76,7 @@ description: "Résumé for James Bruce — education, skills, projects, and expe
                     {% endfor %}
                 </section>
 
-                <hr class="my-4" />
-
-                <section>
+                <section class="resume-section">
                     <p class="eyebrow">Work &amp; Volunteer Experience</p>
                     {% for job in site.data.resume.experience %}
                     <div class="resume-item{% if job.full_only %} full-only{% endif %}">

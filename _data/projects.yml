@@ -4,6 +4,9 @@
 #   description 1-2 sentences on what it does
 #   url         Where the whole card links (live app, or repo if there's no app)
 #   source      GitHub repo for the "Source" button (can match url)
+#   image       Optional thumbnail (e.g. a screenshot of the app). Drop the
+#               file in assets/img/ and set the path here. Remove or comment
+#               out the line to show a text-only card. A ~16:10 crop looks best.
 # Order here = order on the page.
 
 - name: Manufactor
@@ -14,6 +17,7 @@
     add, subtract, and reset counts on a tap mid-game.
   url: https://jimna-h.github.io/manufactor/
   source: https://github.com/jimna-h/manufactor
+  image: assets/img/placeholder-photo.svg
 
 - name: Prowess
   meta: "Magic: The Gathering · web app"
@@ -23,6 +27,7 @@
     creatures, so you don't have to.
   url: https://jimna-h.github.io/prowess/
   source: https://github.com/jimna-h/prowess
+  image: assets/img/placeholder-photo.svg
 
 - name: EDHREC Hipster Quotient
   meta: "Magic: The Gathering · live data lookup"
@@ -32,6 +37,7 @@
     trailblazer or riding the format's most-played picks.
   url: https://jimna-h.github.io/edhrec-hipster-quotient/
   source: https://github.com/jimna-h/edhrec-hipster-quotient
+  image: assets/img/placeholder-photo.svg
 
 - name: QMD Template
   meta: "Typst package · R"
@@ -45,6 +51,6 @@
 - name: Duckbill Cap Helmets
   meta: "Minecraft · Resource Pack · Data Pack"
   description: >-
-    A set of resource and datapacks to replace your Minecrft headwear with Irish duckbill caps.
+    A set of resource and datapacks to replace your Minecraft headwear with Irish duckbill caps.
   url: https://github.com/jimna-h/duckbill_cap_helmets
   source: https://github.com/jimna-h/duckbill_cap_helmets

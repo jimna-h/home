@@ -1,44 +1,287 @@
 /* ==========================================================================
-   custom.css  —  James Bruce
-   All personal styling lives here. It loads AFTER the theme's styles.css.
+   custom.css — James Bruce
+   All personal styling lives here; it loads AFTER the vendor styles.css
+   (Bootstrap + Clean Blog) and overrides it. Never edit styles.css.
 
-   RULE OF THUMB: never edit styles.css again — that's the Bootstrap /
-   Clean Blog vendor file. Anything you want to change or add goes in here.
-   Every rule below is actually used by the HTML pages (no dead weight).
+   Design system — "a figure from a well-typeset stats paper":
+     type    Bricolage Grotesque (display) / Source Serif 4 (body)
+             / IBM Plex Mono (labels, dates, tags)
+     color   paper #F7F9F8 · ink #16262C · accent teal #0E7C6B
+             · amber #DD9A33 (data-point highlight)
+     motif   grid-paper backgrounds, axis-tick eyebrows, fig. captions
    ========================================================================== */
 
 :root {
-  --accent: #0085a1;        /* one accent color, matches the theme's teal   */
-  --accent-dark: #00657b;   /* hover / active state                          */
-  --muted: #6c757d;
-  --line: #e2e8f0;          /* hairline borders                              */
-  --tag-bg: #f1f5f9;        /* skill-tag background                          */
+  --paper:       #f7f9f8;
+  --paper-card:  #ffffff;
+  --ink:         #16262c;
+  --muted:       #5b6b6a;
+  --accent:      #0e7c6b;
+  --accent-dark: #0a5e51;
+  --accent-soft: #e3efeb;
+  --amber:       #dd9a33;
+  --line:        #dde5e2;
+  --grid-line:   rgba(22, 38, 44, 0.055);
+
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono:    "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-/* Keep a scrollbar gutter reserved so pages don't shift sideways. */
+/* --- Base ---------------------------------------------------------------- */
 html { overflow-y: scroll; }
 
-/* --- Nav: highlight the page you're on ---------------------------------- */
+body {
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+p { margin: 0 0 1.15rem; line-height: 1.7; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover, a:focus { color: var(--accent-dark); }
+
+::selection { background: var(--accent-soft); color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+hr { border-top: 1px solid var(--line); opacity: 1; }
+
+/* --- Buttons -------------------------------------------------------------- */
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 0.62rem 1.15rem;
+}
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: var(--accent-dark) !important;
+  border-color: var(--accent-dark) !important;
+}
+.btn-outline-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-ghost {
+  color: var(--ink);
+  border: 1px solid transparent;
+}
+.btn-ghost:hover, .btn-ghost:focus { color: var(--accent-dark); border-color: var(--line); }
+
+/* --- Nav ------------------------------------------------------------------ */
+#mainNav {
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+#mainNav .navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-transform: none;
+}
+#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus { color: var(--accent); }
+#mainNav .navbar-toggler {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus { color: var(--accent); }
 #mainNav .nav-link.active {
   color: var(--accent) !important;
-  font-weight: 700;
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+/* When the theme's scroll script re-fixes the nav, keep our colors. */
+@media (min-width: 992px) {
+  #mainNav { transition: background-color 0.2s; }
+  #mainNav.is-fixed {
+    background-color: rgba(247, 249, 248, 0.96);
+    border-bottom: 1px solid var(--line);
+  }
+  #mainNav.is-fixed .navbar-brand,
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a { color: var(--ink); }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover { color: var(--accent); }
 }
 
-/* --- Small uppercase label above a content block ------------------------ */
+/* --- Grid-paper texture (heroes) ------------------------------------------ */
+.hero, .page-hero {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* --- Home hero -------------------------------------------------------------- */
+.hero { padding: 9.5rem 0 4.5rem; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.hero-name {
+  font-size: clamp(2.9rem, 7vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  margin: 0.4rem 0 1.1rem;
+}
+.hero-lede {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 34ch;
+}
+.hero-actions { margin-top: 1.9rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+/* --- Photo figures ("photo slots") ---------------------------------------
+   Any image wrapped in .figure-frame gets a white mat, hairline border, and
+   a mono "fig." caption. Used for the hero portrait, the about photo, and
+   anywhere else you want to drop a picture. */
+.figure-frame {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.65rem 0.35rem;
+  margin: 0;
+  box-shadow: 0 10px 28px -18px rgba(22, 38, 44, 0.35);
+}
+.figure-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.fig-caption {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.55rem 0.2rem 0.3rem;
+}
+.hero-portrait {
+  max-width: 330px;
+  justify-self: end;
+  transform: rotate(1.25deg);
+}
+.about-figure {
+  max-width: 300px;
+  margin: 0.35rem 0 1.25rem;
+}
+@media (min-width: 768px) {
+  .about-figure {
+    float: right;
+    width: 280px;
+    margin: 0.35rem 0 1rem 1.75rem;
+    transform: rotate(-1.25deg);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero { padding: 7.5rem 0 3.5rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-portrait { max-width: 300px; margin: 0 auto; justify-self: center; transform: rotate(1.25deg); }
+}
+
+/* --- Inner-page hero -------------------------------------------------------- */
+.page-hero { padding: 8.5rem 0 2.8rem; }
+.page-title {
+  font-size: clamp(2.3rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0.35rem 0 0.5rem;
+}
+.page-sub {
+  font-size: 1.12rem;
+  color: var(--muted);
+  margin: 0;
+  font-style: italic;
+}
+@media (max-width: 991.98px) {
+  .page-hero { padding: 6.5rem 0 2.2rem; }
+}
+
+/* --- Main content spacing ---------------------------------------------------- */
+main { padding: 3rem 0 3.5rem; }
+.section-block .section-heading { font-size: 2rem; margin-bottom: 1rem; }
+
+/* --- Eyebrow: styled like an axis label with a tick --------------------------- */
 .eyebrow {
+  font-family: var(--font-mono);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.8rem;
-  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 500;
   color: var(--accent);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 2px;
+  background: var(--accent);
+  flex: none;
 }
 
-/* --- Hero call-to-action buttons ---------------------------------------- */
-.hero-actions { margin-top: 1.75rem; }
-.hero-actions .btn { margin: 0.25rem 0.4rem 0.25rem 0; }
+/* --- Résumé sections & entries -------------------------------------------------- */
+.resume-section { padding: 1.9rem 0; border-top: 1px solid var(--line); }
+.resume-section:first-of-type { border-top: 0; padding-top: 0.5rem; }
+.resume-section .resume-item:last-child { margin-bottom: 0; }
+.skill-group {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 0.9rem 0 0.45rem;
+}
+/* If contributions are hidden (one-page view), no double border shows because
+   the section is display:none entirely. */
 
-/* --- Résumé entries ----------------------------------------------------- */
 .resume-item { margin: 0 0 2rem; }
 .resume-head {
   display: flex;
@@ -47,84 +290,139 @@ html { overflow-y: scroll; }
   flex-wrap: wrap;
   align-items: baseline;
 }
-.resume-head h3 { margin: 0; font-weight: 700; }
-.resume-date { color: var(--muted); font-style: italic; white-space: nowrap; }
-.resume-sub  { color: var(--muted); font-style: italic; margin: 0.15rem 0 0.5rem; }
+.resume-head h3 { margin: 0; font-weight: 700; font-size: 1.35rem; }
+.resume-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.resume-sub { color: var(--muted); font-style: italic; margin: 0.15rem 0 0.5rem; }
 @media (max-width: 576px) {
   .resume-date { white-space: normal; }
 }
 
-/* --- Résumé length toggle ---------------------------------------------- */
+/* --- Résumé length toggle --------------------------------------------------- */
 .resume-toggle {
   display: inline-flex;
   border: 1px solid var(--accent);
   border-radius: 999px;
   overflow: hidden;
+  background: var(--paper-card);
 }
 .resume-toggle-btn {
   border: 0;
   background: transparent;
   color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.35rem 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
   cursor: pointer;
 }
 .resume-toggle-btn.active { background: var(--accent); color: #fff; }
 
-/* Entries tagged full-only are hidden in the default one-page view and
-   revealed when the wrapper switches to the full view. */
 .full-only { display: none; }
 [data-resume-view="full"] .full-only { display: revert; }
 
-/* --- Skill / tech tags -------------------------------------------------- */
-.tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+/* --- Skill / tech tags -------------------------------------------------------- */
+.tech-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.5rem; }
 .tech-tag {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   font-weight: 500;
-  background: var(--tag-bg);
-  color: #1e293b;
-  padding: 0.35rem 0.65rem;
-  border-radius: 4px;
-  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  padding: 0.32rem 0.62rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
 }
 
-/* --- Project cards ------------------------------------------------------ */
+/* --- Project cards -------------------------------------------------------------- */
 .project-card {
   display: block;
   position: relative;
+  background: var(--paper-card);
   border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
   border-radius: 10px;
-  padding: 1.25rem 1.4rem;
+  padding: 1.4rem 1.55rem;
   margin-bottom: 1.25rem;
   color: inherit;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 24px -10px rgba(22, 38, 44, 0.14);
   border-color: var(--accent);
 }
-.project-card h3 { font-size: 1.4rem; margin: 0 0 0.15rem; }
+.project-card { display: flex; gap: 1.35rem; align-items: flex-start; }
+.project-thumb {
+  flex: 0 0 190px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  overflow: hidden;
+  background: var(--accent-soft);
+}
+.project-thumb img { display: block; width: 100%; height: auto; }
+.project-body { flex: 1 1 auto; min-width: 0; }
+@media (max-width: 575.98px) {
+  .project-card { flex-direction: column; gap: 1rem; }
+  .project-thumb { flex-basis: auto; width: 100%; }
+}
+.project-card h3 { font-size: 1.45rem; margin: 0 0 0.2rem; }
 .project-card h3 a { color: inherit; text-decoration: none; }
 .project-card:hover h3 a { color: var(--accent); }
 .project-card .project-meta {
-  color: var(--accent);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
 }
-.project-card p { margin: 0; color: #475569; }
-.project-card .project-links { margin-top: 0.85rem; font-size: 0.9rem; font-weight: 600; }
+.project-card p { margin: 0; color: var(--ink); }
+.project-card .project-links {
+  margin-top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
 /* z-index keeps this link clickable above the card's stretched-link overlay */
-.project-card .project-links a { position: relative; z-index: 2; color: var(--accent); margin-right: 1.1rem; text-decoration: none; }
+.project-card .project-links a {
+  position: relative;
+  z-index: 2;
+  color: var(--accent);
+  margin-right: 1.1rem;
+  text-decoration: none;
+}
 .project-card .project-links a:hover { color: var(--accent-dark); text-decoration: underline; }
 
-/* --- Contact page ------------------------------------------------------- */
-.form-note { font-size: 0.9rem; color: var(--muted); }
+/* --- Contact form ------------------------------------------------------------------ */
+.form-control { background-color: transparent; font-family: var(--font-body); }
+.form-floating > label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); }
+.border-bottom { border-color: var(--line) !important; }
+.form-floating:focus-within.border-bottom { border-color: var(--accent) !important; }
+.form-note { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
 
-/* --- Footer social links ------------------------------------------------ */
-.footer-links { margin-bottom: 0.35rem; }
-.footer-links a { color: var(--muted); margin: 0 0.5rem; font-size: 1.15rem; }
+/* --- Footer ---------------------------------------------------------------------------- */
+footer {
+  background-color: var(--paper) !important;
+  border-top: 1px solid var(--line) !important;
+}
+.footer-links { margin-bottom: 0.4rem; }
+.footer-links a { color: var(--muted); margin: 0 0.55rem; font-size: 1.15rem; }
 .footer-links a:hover { color: var(--accent); }
+footer .small { font-family: var(--font-mono); font-size: 0.75rem !important; }
+
+/* --- Motion & accessibility ---------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .project-card, #mainNav { transition: none; }
+  .project-card:hover { transform: none; }
+}
+
+.featured-block { border-top: 1px solid var(--line); padding-top: 2.5rem; margin-top: 0.5rem; }
+
+/* --- Small refinements -------------------------------------------------------- */
+.alert-success { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }

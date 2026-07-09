@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#edf3f0"/>
+  <g stroke="#16262c" stroke-opacity="0.06" stroke-width="1">
+    <path d="M48 0V300 M96 0V300 M144 0V300 M192 0V300 M240 0V300 M288 0V300 M336 0V300 M384 0V300 M432 0V300"/>
+    <path d="M0 48H480 M0 96H480 M0 144H480 M0 192H480 M0 240H480"/>
+  </g>
+  <g stroke="#5b6b6a" stroke-width="2" fill="none">
+    <rect x="196" y="112" width="88" height="64" rx="8"/>
+    <circle cx="240" cy="144" r="16"/>
+    <path d="M212 112 l8 -12 h40 l8 12"/>
+  </g>
+  <text x="240" y="216" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#5b6b6a">photo slot</text>
+  <text x="240" y="238" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8aa09a">swap in your own image</text>
+</svg>
