@@ -9,7 +9,7 @@ description: "Résumé for James Bruce — education, skills, projects, and expe
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-9 col-xl-8">
-                <p class="eyebrow">The data on me</p>
+                <p class="eyebrow">Background</p>
                 <h1 class="page-title">Résumé</h1>
                 <p class="page-sub">Education, skills &amp; experience — as a page or a PDF.</p>
             </div>
@@ -54,6 +54,16 @@ description: "Résumé for James Bruce — education, skills, projects, and expe
                     </div>
                     {% endfor %}
                 </section>
+
+                {% if site.data.resume.coursework %}
+                <!-- Full-history view only, to match the one-page PDF. -->
+                <section class="resume-section full-only">
+                    <p class="eyebrow">Relevant Coursework</p>
+                    <div class="tech-tags">
+                        {% for course in site.data.resume.coursework %}<span class="tech-tag">{{ course | escape }}</span>{% endfor %}
+                    </div>
+                </section>
+                {% endif %}
 
                 <section class="resume-section">
                     <p class="eyebrow">Skills</p>

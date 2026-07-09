@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#f7f9f8"/>
+  <g stroke="#16262c" stroke-opacity="0.09" stroke-width="1">
+    <path d="M16 0V64 M32 0V64 M48 0V64 M0 16H64 M0 32H64 M0 48H64"/>
+  </g>
+  <text x="32" y="43" text-anchor="middle" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#0e7c6b">JB</text>
+</svg>

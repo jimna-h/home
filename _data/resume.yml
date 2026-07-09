@@ -11,6 +11,16 @@ education:
       - "Winner, BYU Statistics Underclassmen Team Case Study Competition (2024)"
       - "Member: Statistics Club Association, Data Science Association, AI in Business Society"
 
+# Relevant coursework — shows as a compact tag row under Education, in the
+# "Full history" view only (the one-page view matches the one-page PDF). Guidance: pick the 8-12 courses that map to
+# the jobs you're applying for (stats methods, ML, databases, programming),
+# use the real course names, and skip GEs/intro filler. Uncomment and edit:
+# coursework:
+#   - Applied Regression Analysis
+#   - Statistical Computing in R
+#   - Database Systems
+#   - Machine Learning
+
 skills:
   - group: Programming
     items: [Python, SQL, R, VBA, HTML, CSS, JavaScript]

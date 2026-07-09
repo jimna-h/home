@@ -10,21 +10,23 @@ nav_active: home
             <div class="hero-copy">
                 <p class="eyebrow">Statistics &amp; Data Science · BYU</p>
                 <h1 class="hero-name">James Bruce</h1>
-                <p class="hero-lede">I turn repetitive work into scripts, fragile systems into sturdy ones, and gut&nbsp;calls into decisions backed by data.</p>
+                <p class="hero-lede">I like finding the tedious part of a job and writing the script that makes it go away. Currently a research assistant, a TA, and a builder of small web apps.</p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="resume.html">View résumé</a>
                     <a class="btn btn-outline-primary" href="projects.html">See projects</a>
-                    <a class="btn btn-ghost" href="{{ site.social.github }}" target="_blank" rel="noopener">
-                        <i class="fab fa-github"></i>&nbsp;GitHub
-                    </a>
                 </div>
+                <a class="link-quiet" href="{{ site.social.github }}" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>&nbsp;github.com/jimna-h
+                </a>
             </div>
-            <!-- PHOTO SLOT: replace assets/img/portrait.svg with a real photo
-                 (e.g. assets/img/portrait.jpg — a 4:5-ish crop works best),
-                 update the src below, and edit the caption to taste. -->
+            <!-- PHOTO SLOT: drop your photo at assets/img/portrait.jpg
+                 (a 4:5-ish crop works best) and edit the caption to taste.
+                 Until that file exists, the placeholder SVG shows instead. -->
             <figure class="figure-frame hero-portrait">
-                <img src="assets/img/portrait.jpg" alt="Portrait of James Bruce" width="360" height="450" />
-                <figcaption class="fig-caption">fig. 1 · James Bruce headshot</figcaption>
+                <img src="assets/img/portrait.jpg"
+                     onerror="this.onerror=null;this.src='assets/img/placeholder-portrait.svg'"
+                     alt="Portrait of James Bruce" width="360" height="450" />
+                <figcaption class="fig-caption">fig. 1 · me</figcaption>
             </figure>
         </div>
     </div>
@@ -37,16 +39,16 @@ nav_active: home
             <p class="eyebrow">About</p>
             <h2 class="section-heading mt-0">Hey, I'm James.</h2>
 
-            <!-- PHOTO SLOT: floats beside the text on desktop. Swap
-                 assets/img/about-photo.svg for a real photo (family, a game
+            <!-- PHOTO SLOT: floats beside the text on desktop. Drop a real photo at assets/img/about-photo.jpg,
+                 point the src below at it (family, a game
                  night, your desk…) and edit the caption. Delete this <figure>
                  if you'd rather have text only. -->
             <figure class="figure-frame about-figure">
                 <img src="assets/img/about-photo.svg" alt="" width="480" height="300" />
-                <figcaption class="fig-caption">fig. 2 · life outside the IDE</figcaption>
+                <figcaption class="fig-caption">fig. 2 · outside the IDE</figcaption>
             </figure>
 
-            <p>I'm a Statistics student at BYU with a Data Science emphasis and minors in CS and Information Systems. For me, data isn’t just an academic exercise—it’s a practical lever for solving real-world problems. If a task is repetitive, I’ll automate it; if a system is fragile, I want to build a version that holds up; if a decision needs to be made, I want to look at the numbers.</p>
+            <p>I'm a Statistics student at BYU with a Data Science emphasis and minors in CS and Information Systems. For me, data isn’t just an academic exercise—it’s a practical way to solve real problems. If a task is repetitive, I’ll automate it; if a decision needs to be made, I’d rather look at the numbers than guess.</p>
 
             <p>Right now, I split my time between working as a research assistant, TA-ing for an introductory Information Systems course, and writing custom automation scripts and little web apps to make life a bit easier.</p>
 

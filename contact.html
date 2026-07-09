@@ -9,49 +9,64 @@ description: "Get in touch with James Bruce."
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-9 col-xl-8">
-                <p class="eyebrow">Correspondence</p>
+                <p class="eyebrow">Get in touch</p>
                 <h1 class="page-title">Contact</h1>
-                <p class="page-sub">Have a question, a project, or an opportunity? Send a message.</p>
+                <p class="page-sub">Questions, projects, opportunities — I'll reply within a day or two.</p>
             </div>
         </div>
     </div>
 </header>
 
-<main class="container px-4 px-lg-5 my-4 flex-grow-1">
+<main class="container px-4 px-lg-5 flex-grow-1">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-9 col-xl-8">
+            <div class="contact-grid">
 
-            <p>Have a question or want to get in touch? Send me a message below and I'll get back to you.</p>
+                <div class="contact-form-col">
+                    <form id="contactForm" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" novalidate>
+                        <input type="hidden" name="_subject" value="New message from jimna-h.github.io" />
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-            <div class="my-4">
-                <form id="contactForm" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
-                    <input type="hidden" name="_subject" value="New message from jimna-h.github.io" />
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input class="form-control" id="name" name="name" type="text" autocomplete="name" required />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <input class="form-control" id="email" name="email" type="email" autocomplete="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="7" required></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Send message</button>
+                    </form>
 
-                    <div class="form-floating border-bottom mb-2">
-                        <input class="form-control border-0 shadow-none px-0" id="name" name="name" type="text" placeholder="Name" required />
-                        <label class="px-0" for="name">Name</label>
+                    <div id="formSuccess" class="alert alert-success mt-3" style="display:none" role="alert">
+                        <i class="fas fa-check-circle"></i> Thanks — your message is on its way. I'll get back to you within a day or two.
                     </div>
-                    <div class="form-floating border-bottom mb-2">
-                        <input class="form-control border-0 shadow-none px-0" id="email" name="email" type="email" placeholder="Email" required />
-                        <label class="px-0" for="email">Email address</label>
+                    <div id="formError" class="alert alert-danger mt-3" style="display:none" role="alert">
+                        Something went wrong sending your message. Please try again in a moment, or email me directly instead.
                     </div>
-                    <div class="form-floating border-bottom mb-4">
-                        <textarea class="form-control border-0 shadow-none px-0" id="message" name="message" placeholder="Message" style="height: 10rem" required></textarea>
-                        <label class="px-0" for="message">Message</label>
-                    </div>
-                    <button class="btn btn-primary text-uppercase" type="submit">Send message</button>
-                    <p class="form-note mt-2">Goes straight to my inbox — I'll reply within a day or two.</p>
-                </form>
-
-                <div id="formSuccess" class="alert alert-success mt-3" style="display:none" role="alert">
-                    <i class="fas fa-check-circle"></i> Thanks — your message is on its way. I'll get back to you within a day or two.
                 </div>
-                <div id="formError" class="alert alert-danger mt-3" style="display:none" role="alert">
-                    Something went wrong sending your message. Please try again in a moment.
-                </div>
+
+                <aside class="contact-aside">
+                    <p class="eyebrow">Or reach me directly</p>
+                    <ul class="contact-channels">
+                        <li>
+                            <a href="mailto:{{ site.social.email }}"><i class="fas fa-envelope fa-fw"></i> {{ site.social.email }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-fw"></i> LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> GitHub</a>
+                        </li>
+                    </ul>
+                    <p class="contact-note">Recruiter or hiring manager? The <a href="resume.html">résumé page</a> has a one-page PDF ready to download.</p>
+                </aside>
+
             </div>
-
         </div>
     </div>
 </main>
