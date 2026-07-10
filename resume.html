@@ -75,17 +75,6 @@ description: "Résumé for James Bruce — education, skills, projects, and expe
                     {% endfor %}
                 </section>
 
-                <!-- Only shown in the "Full history" view. -->
-                <section class="resume-section full-only">
-                    <p class="eyebrow">Notable Contributions</p>
-                    {% for item in site.data.resume.contributions %}
-                    <div class="mb-3">
-                        <h3 class="h5 mb-1">{{ item.title | escape }}</h3>
-                        <p>{{ item.description | escape }}</p>
-                    </div>
-                    {% endfor %}
-                </section>
-
                 <section class="resume-section">
                     <p class="eyebrow">Work &amp; Volunteer Experience</p>
                     {% for job in site.data.resume.experience %}
