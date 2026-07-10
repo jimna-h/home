@@ -9,12 +9,26 @@
 #               out the line to show a text-only card. A ~16:10 crop looks best.
 # Order here = order on the page.
 
-- name: Manufactor
-  meta: "Magic: The Gathering · web app"
+- name: EDHREC Hipster Quotient
+  meta: "Live data extraction · statistics · vanilla JS"
   description: >-
-    A phone-friendly token counter for artifact-heavy decks. Create deck
-    profiles that remember your four token types and their modifiers, then
-    add, subtract, and reset counts on a tap mid-game.
+    Scores how mainstream your Commander decks are by extracting each
+    commander's popularity rank live from EDHREC's page payloads — no official
+    API — with slug normalization for accented and double-faced card names,
+    request throttling and caching, and an outlier-robust score built on a
+    weighted median. Scryfall-powered autocomplete included.
+  url: https://jimna-h.github.io/edhrec-hipster-quotient/
+  source: https://github.com/jimna-h/edhrec-hipster-quotient
+  image: assets/img/placeholder-photo.svg
+
+- name: Manufactor
+  meta: "Rules-engine modeling · offline-first PWA"
+  description: >-
+    An installable, offline-capable token counter for artifact-heavy Magic
+    decks. Models the game's stacking replacement effects as an ordered
+    pipeline — flat bonuses, sequential Academy Manufactor passes, then
+    doublers multiplying the batch by 2^n — with per-deck profiles that
+    persist between games.
   url: https://jimna-h.github.io/manufactor/
   source: https://github.com/jimna-h/manufactor
   image: assets/img/placeholder-photo.svg
@@ -23,34 +37,25 @@
   meta: "Magic: The Gathering · web app"
   description: >-
     A per-turn tracker for prowess and storm decks. Log each spell as you cast
-    it and the app keeps a running storm count and the buff math across your
-    creatures, so you don't have to.
+    it and the app derives the storm count and buff totals across your
+    creatures in real time, so you don't have to.
   url: https://jimna-h.github.io/prowess/
   source: https://github.com/jimna-h/prowess
   image: assets/img/placeholder-photo.svg
 
-- name: EDHREC Hipster Quotient
-  meta: "Magic: The Gathering · live data lookup"
-  description: >-
-    Type in your Commander deck's leaders and it pulls their all-time
-    popularity rank live from EDHREC, then tells you whether you're a
-    trailblazer or riding the format's most-played picks.
-  url: https://jimna-h.github.io/edhrec-hipster-quotient/
-  source: https://github.com/jimna-h/edhrec-hipster-quotient
-  image: assets/img/placeholder-photo.svg
-
 - name: QMD Template
-  meta: "Typst package · R"
+  meta: "Build tooling · R · Typst"
   description: >-
-    A Typst package that runs R code inside Typst documents and renders it to
-    PDF — a lightweight alternative to Quarto for statistics coursework. Built
-    in R and Typst.
+    A Typst package plus R build pipeline that runs R code chunks inside Typst
+    documents and renders straight to PDF — a lightweight alternative to
+    Quarto for statistical reports and coursework.
   url: https://github.com/jimna-h/QMDTemplate
   source: https://github.com/jimna-h/QMDTemplate
 
 - name: Duckbill Cap Helmets
-  meta: "Minecraft · Resource Pack · Data Pack"
+  meta: "Minecraft · resource pack · data pack"
   description: >-
-    A set of resource and datapacks to replace your Minecraft headwear with Irish duckbill caps.
+    A resource-and-data-pack pair that replaces every Minecraft helmet with an
+    Irish duckbill cap. Not everything has to be a data project.
   url: https://github.com/jimna-h/duckbill_cap_helmets
   source: https://github.com/jimna-h/duckbill_cap_helmets
