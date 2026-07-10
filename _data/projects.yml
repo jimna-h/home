@@ -10,11 +10,11 @@
 # Order here = order on the page.
 
 - name: EDHREC Hipster Quotient
-  meta: "Live data extraction · statistics · vanilla JS"
+  meta: "Live data extraction · vanilla JS"
   description: >-
     Scores how mainstream your Commander decks are by extracting each
-    commander's popularity rank live from EDHREC's page payloads — no official
-    API — with slug normalization for accented and double-faced card names,
+    commander's popularity rank live from EDHREC's page payloads (there's no official
+    API) with slug normalization for accented and double-faced card names,
     request throttling and caching, and an outlier-robust score built on a
     weighted median. Scryfall-powered autocomplete included.
   url: https://jimna-h.github.io/edhrec-hipster-quotient/
