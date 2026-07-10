@@ -43,14 +43,15 @@
   source: https://github.com/jimna-h/prowess
   image: assets/img/placeholder-photo.svg
 
-- name: QMD Template
-  meta: "Build tooling · R · Typst"
+- name: tweave
+  meta: "R · Typst · cross-platform CLI"
   description: >-
-    A Typst package plus R build pipeline that runs R code chunks inside Typst
-    documents and renders straight to PDF — a lightweight alternative to
-    Quarto for statistical reports and coursework.
-  url: https://github.com/jimna-h/QMDTemplate
-  source: https://github.com/jimna-h/QMDTemplate
+    A Typst package and R build pipeline for writing statistics homework:
+    live R chunks, plots, and inline values compiled straight to PDF, plus
+    auto-numbered questions and a few personal shorthands — a lightweight,
+    cross-platform alternative to Quarto. Named after Typst + Weave.
+  url: https://github.com/jimna-h/tweave
+  source: https://github.com/jimna-h/tweave
 
 - name: Duckbill Cap Helmets
   meta: "Minecraft · resource pack · data pack"
