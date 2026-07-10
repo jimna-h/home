@@ -68,6 +68,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
+            // The form has `novalidate` so we can style errors ourselves,
+            // but we still enforce the native required/email checks here.
+            if (!form.reportValidity()) return;
             error.style.display = 'none';
             button.disabled = true;
             button.textContent = 'Sending…';

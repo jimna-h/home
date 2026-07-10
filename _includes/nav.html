@@ -1,14 +1,14 @@
 <!-- Shared top navigation. Edit links in _data/nav.yml, not here. -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.html">{{ site.title }}</a>
+        <a class="navbar-brand" href="{{ site.baseurl }}/index.html">{{ site.title }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
                 {% for item in site.data.nav %}
-                <li class="nav-item"><a class="nav-link{% if page.nav_active == item.id %} active{% endif %} px-lg-3 py-3 py-lg-4" href="{{ item.url }}">{{ item.title }}</a></li>
+                <li class="nav-item"><a class="nav-link{% if page.nav_active == item.id %} active{% endif %} px-lg-3 py-3 py-lg-4" href="{{ site.baseurl }}/{{ item.url }}">{{ item.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
