@@ -16,7 +16,7 @@
     documents and compiles them straight to PDF — Sweave's idea, rebuilt for
     Typst. One-command install, a tested knitr hook layer, and a companion
     Typst template for statistics homework with auto-numbered questions and
-    stats math shorthands.
+    a few personal preference stats math shorthands.
   url: https://github.com/jimna-h/tweave
   source: https://github.com/jimna-h/tweave
 
