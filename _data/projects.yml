@@ -9,6 +9,17 @@
 #               out the line to show a text-only card. A ~16:10 crop looks best.
 # Order here = order on the page.
 
+- name: tweave
+  meta: "R package · cross-platform CLI · Typst"
+  description: >-
+    An R package and command-line tool that weaves live R code into Typst
+    documents and compiles them straight to PDF — Sweave's idea, rebuilt for
+    Typst. One-command install, a tested knitr hook layer, and a companion
+    Typst template for statistics homework with auto-numbered questions and
+    stats math shorthands.
+  url: https://github.com/jimna-h/tweave
+  source: https://github.com/jimna-h/tweave
+
 - name: EDHREC Hipster Quotient
   meta: "Live data extraction · vanilla JS"
   description: >-
@@ -42,16 +53,6 @@
   url: https://jimna-h.github.io/prowess/
   source: https://github.com/jimna-h/prowess
   image: assets/img/placeholder-photo.svg
-
-- name: tweave
-  meta: "R · Typst · cross-platform CLI"
-  description: >-
-    A Typst package and R build pipeline for writing statistics homework:
-    live R chunks, plots, and inline values compiled straight to PDF, plus
-    auto-numbered questions and a few personal shorthands — a lightweight,
-    cross-platform alternative to Quarto. Named after Typst + Weave.
-  url: https://github.com/jimna-h/tweave
-  source: https://github.com/jimna-h/tweave
 
 - name: Duckbill Cap Helmets
   meta: "Minecraft · resource pack · data pack"
