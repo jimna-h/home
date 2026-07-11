@@ -35,11 +35,10 @@
 - name: Manufactor
   meta: "Rules-engine modeling · offline-first PWA"
   description: >-
-    An installable, offline-capable token counter for artifact-heavy Magic
-    decks. Models the game's stacking replacement effects as an ordered
-    pipeline — flat bonuses, sequential Academy Manufactor passes, then
-    doublers multiplying the batch by 2^n — with per-deck profiles that
-    persist between games.
+    An installable, offline-capable token counter for artifact-token-heavy Magic:
+    The Gathering decks. Models the game's stacking replacement effects as an ordered
+    pipeline: additive token increasers, sequential Academy Manufactor passes, then
+    multiplicitive token increasers, with per-deck profiles that persist between games.
   url: https://jimna-h.github.io/manufactor/
   source: https://github.com/jimna-h/manufactor
   image: assets/img/placeholder-photo.svg
