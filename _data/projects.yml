@@ -41,7 +41,7 @@
     multiplicitive token increasers, with per-deck profiles that persist between games.
   url: https://jimna-h.github.io/manufactor/
   source: https://github.com/jimna-h/manufactor
-  image: assets/img/placeholder-photo.svg
+  image: assets/img/manufactor.png
 
 - name: Prowess
   meta: "Magic: The Gathering · web app"
