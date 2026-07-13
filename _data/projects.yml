@@ -30,7 +30,7 @@
     weighted median. Scryfall-powered autocomplete included.
   url: https://jimna-h.github.io/edhrec-hipster-quotient/
   source: https://github.com/jimna-h/edhrec-hipster-quotient
-  image: assets/img/placeholder-photo.svg
+  image: assets/img/edhrec-hipster.png
 
 - name: Manufactor
   meta: "Rules-engine modeling · offline-first PWA"
