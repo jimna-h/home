@@ -32,7 +32,7 @@ skills:
 experience:
   - title: "Research Assistant — James Gaskin, PhD"
     date: "Jan 2026 – Present"
-    org: "Information Systems, Brigham Young University — Provo, UT"
+    org: "Brigham Young University — Provo, UT"
     full_only: false
     bullets:
       - "Evaluated and benchmarked alternative AR tools to standardize the development pipeline on Unity."
