@@ -25,7 +25,7 @@ skills:
   - group: Programming
     items: [Python, SQL, R, VBA, HTML, CSS, JavaScript]
   - group: Tools & Platforms
-    items: [Excel, Tableau, n8n, GitHub, Unity, Typst, Regex]
+    items: [Excel, Tableau, n8n, GitHub, Unity, Typst, Postman]
   - group: Professional
     items: [Workflow Automation, Data Modeling, AI Prompt Engineering]
 
